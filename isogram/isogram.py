@@ -5,3 +5,4 @@ def is_isogram(msg):
         return True
     else:
         return False
+print(is_isogram('test'))
