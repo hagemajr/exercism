@@ -1,9 +1,9 @@
+NORTH = 1
+EAST = 2
+SOUTH = 4
+WEST = 8
+
 class Robot:
-    NORTH = 1
-    EAST = 2
-    SOUTH = 4
-    WEST = 8
-    
     def __init__(self,facing=1,x=0,y=0):
         self.coordinates = (x,y)
         self.bearing = facing
