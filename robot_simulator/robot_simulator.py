@@ -9,27 +9,27 @@ class Robot:
         self.bearing = facing
     
     def turn_left(self):
-        if self.bearing == self.NORTH:
-            self.bearing = self.WEST
+        if self.bearing == NORTH:
+            self.bearing = WEST
         else:
             self.bearing = self.bearing >> 1 
     
     def turn_right(self):
-        if self.bearing == self.WEST:
-            self.bearing = self.NORTH
+        if self.bearing == WEST:
+            self.bearing = NORTH
         else:
             self.bearing = self.bearing << 1
     
     def advance(self):
-        if self.bearing == self.NORTH:
+        if self.bearing == NORTH:
             x,y = self.coordinates
             y += 1
             self.coordinates = (x,y)
-        elif self.bearing == self.SOUTH:
+        elif self.bearing == SOUTH:
             x,y = self.coordinates
             y -= 1
             self.coordinates = (x,y)
-        elif self.bearing == self.EAST:
+        elif self.bearing == EAST:
             x,y = self.coordinates
             x += 1
             self.coordinates = (x,y)
@@ -49,8 +49,8 @@ class Robot:
             else:
                 raise ValueError("Invalid instruction")
 
-#robot = Robot(4, 8, 4)
-#robot.simulate("LAAARRRALLLL")
-#print("{} - {}".format(robot.coordinates,robot.bearing))
+robot = Robot(4, 8, 4)
+robot.simulate("LAAARRRALLLL")
+print("{} - {}".format(robot.coordinates,robot.bearing))
 #self.assertEqual(robot.coordinates, (11, 5))
 #self.assertEqual(robot.bearing, NORTH)
