@@ -49,8 +49,8 @@ class Robot:
             else:
                 raise ValueError("Invalid instruction")
 
-robot = Robot(4, 8, 4)
-robot.simulate("LAAARRRALLLL")
-print("{} - {}".format(robot.coordinates,robot.bearing))
+#robot = Robot(4, 8, 4)
+#robot.simulate("LAAARRRALLLL")
+#print("{} - {}".format(robot.coordinates,robot.bearing))
 #self.assertEqual(robot.coordinates, (11, 5))
 #self.assertEqual(robot.bearing, NORTH)
